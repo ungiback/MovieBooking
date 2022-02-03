@@ -18,12 +18,5 @@ module.exports = {
       }
     ]
   },
-  env: {
-    mysql_host :'localhost',
-    mysql_port :3306,
-    mysql_database :'backmovie',
-    mysql_user :'backtest',
-    mysql_password :'backtest!@12', 
-  },
   trailingSlash: true
 }

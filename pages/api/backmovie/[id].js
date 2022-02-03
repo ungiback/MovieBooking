@@ -1,4 +1,4 @@
-import { movies } from '../movieData'
+import { movies } from "../../../store/movieData"
 
 export default function isPbHandler(req, res) {
     const { id } = req.query;

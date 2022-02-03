@@ -14,7 +14,7 @@ export const fetcher = async (url) => {
     const data = await res.json()
     let error
     if (res.status !== 200) {
-        error =  new Error(data.msg)
+        error = new Error(data.msg)
     }
-    return {data,error}
+    return { data, error }
 }

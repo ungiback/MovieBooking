@@ -1,4 +1,4 @@
-export const St = {
+export const row = {
     // id:각아이디에넘버
     A:{
         1:1,

@@ -1,4 +1,4 @@
-import { movies } from '../movieData'
+import { movies } from "../../../store/movieData"
 
 export default function handler(req, res) {
     if (movies.length > 1) {

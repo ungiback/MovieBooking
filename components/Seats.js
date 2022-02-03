@@ -2,12 +2,14 @@
 import { useEffect, useCallback } from "react"
 import { addSeatid, removeSeatid } from "../store/redux/reducers/seatselection"
 import { useDispatch, useSelector } from "react-redux"
+import { row } from "../store/SeatRow"
 
 const Seats = (props) => {
     const dispatch = useDispatch()
     const state = useSelector((state) => state.seatselection)
-    const { St, seats } = props
+    const { seats } = props
 
+    console.log(seats)
     const onselect = useCallback(e => {
         e.preventDefault()
         const toggle_true = (Target) => {
@@ -46,12 +48,12 @@ const Seats = (props) => {
             </section>
 
             <div className="flex flex-col" id="isSelected">
-                {Object.entries(St).map((row, idx) => (
+                {Object.entries(row).map((row, idx) => (
                     <div key={idx} className="flex mb=1">
                         <strong className="mr-16 my-2 ml-2">{row[0]}</strong>
                         <div className="flex justify-center items-center w-full " id="buttons">
                             {Object.entries(row[1]).map((col, idx) =>
-                                seats?.includes(parseInt(col[0])) ?
+                                seats?.data.includes(parseInt(col[0])) ?
                                     <button disabled key={idx} className="bg-orange-200 w-12 h-8 rounded-lg mx-4">x</button>
                                     :
                                     <button key={idx} seatid={col[0]} className="bg-green-300 w-12 h-8 rounded-lg mx-4" onClick={(e) => onselect(e)}>{col[1]}</button>

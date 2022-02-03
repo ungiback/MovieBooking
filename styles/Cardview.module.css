@@ -1,0 +1,42 @@
+.card{
+    position: relative;
+    box-sizing: border-box;
+    width: 220px;
+    height: 360px;
+    margin: 6px;
+}
+
+.img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: #000;
+    opacity: 0;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    flex-direction: column;
+}
+
+.card:hover .dark{
+    opacity: 0.8;
+}
+.card:hover .content{
+    opacity: 1;
+}
